@@ -1,0 +1,92 @@
+.comment {
+    margin-top: 1.5rem;
+    display: flex; /* Ficar um do lado do outro */
+    gap: 1rem;
+}
+
+.commentBox {
+    flex: 1; /* Devido o ".comment" usar "display flex", o "flex 1" faz com que use todo o espaço */
+}
+
+.commentContent {
+    background: var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.commentContent header {
+    display: flex; /* Coloca o icone do lado do "nome" e do "time" */
+    align-items: flex-start; /* Alinhar o icone da lixeira ao inicio */
+    justify-content: space-between; /* Coloca o icone ao extremo do "right" */
+}
+
+/* .authorAndTime {
+    display: flex;  // Coloca um em baixo do outro 
+    flex-direction: column; // Coloca um em baixo do outro 
+} */
+
+.authorAndTime strong {
+    display: block; /* Coloca um em baixo do outro */
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.6; /* Espaçamento entre as palavras */
+}
+
+.authorAndTime time {
+    display: block; /* Coloca um em baixo do outro */
+    font-size: 0.75; /* 12px */
+    line-height: 1.6; /* Espaçamento entre as palavras */
+    color: var(--gray-400);
+}
+
+.commentContent header button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-400);
+    cursor: pointer;
+    line-height: 0; /* quando usar o ":focus" ser do mesmo tamanho do botão */
+    border-radius: 2px;
+}
+
+.commentContent header button:hover {
+    color: var(--red-500);
+}
+
+.commentContent p {
+    margin-top: 1rem;
+    color: var(--gray-300);
+}
+
+.footerComment {
+    margin-top: 1rem;
+}
+
+.footerComment button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-400);
+    cursor: pointer;
+}
+
+.footerComment button {
+    background: transparent;
+    border: 0; /* Retirar estilização padrão do HTML */
+    color: var(--gray-400);
+    cursor: pointer;
+    display: flex; /* deixar na mesma linha */
+    align-items: center; /* Alinhar horizontalmente */
+    border-radius: 2px;
+}
+
+.footerComment button:hover {
+    color: var(--green-300);
+}
+
+.footerComment button svg {
+    margin-right: 0.5rem;
+}
+
+/* before - Acrescentar uma estilização antes do conteúdo */
+.footerComment button span::before {
+    content: "\2022"; /* Icone bolinha */
+    padding: 0 0.25rem;
+}

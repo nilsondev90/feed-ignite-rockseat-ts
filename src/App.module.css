@@ -1,0 +1,24 @@
+.wraper {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 256px 1fr; /* 2 colunas */
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) { /* Tamanho mobile */
+    html {
+        /* 
+            16 -> 100%  - 16px é 100%
+            14 -> x     - Vamos usar 14px
+            
+            Calculo: 14 x 100 / 16 = 87,5%
+        */
+        font-size: 87.5%; /* Tamanho da fonte em Mobile */
+    }
+    .wraper {
+        grid-template-columns: 1fr; /* Somente 1 coluna */
+    }
+}

@@ -1,0 +1,135 @@
+.post {
+    background: var(--gray-800);
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+
+/* Se estiver mais de um post, aplicar o margin top */
+.post + .post {
+    margin-top: 2rem;
+}
+
+.content {
+    line-height: 1.6rem; /* distribuir em altura */
+    color: var(--gray-300);
+    margin-top: 1.5rem;
+}
+
+.content p {
+    margin-top: 1rem;
+}
+
+.content a {
+    font-weight: bold;
+    color: var(--green-500);
+    text-decoration: none; /* Retirar linha */
+}
+
+.content a:hover {
+    color: var(--green-300);
+}
+
+/* Usa o primeiro <header> */
+.post > header {
+    display: flex; /* Coloca um do lado do outro */
+    align-items: center; /* alinha na posição vertical */
+    justify-content: space-between; /* Alinha a <div> em Left e <time> em right */
+}
+
+.post > header time {
+    font-size: 0.875rem; /* 14px */
+    color: var(--gray-400);
+}
+
+.author {
+    display: flex; /* ficar do lado da imagem */
+    align-items: center; /* alinha na posição vertical */
+    gap: 1rem; /* espaçamento entre a foto e os textos */
+}
+
+/* Forma a ficar um em baixo do outro */
+/* .authorInfo {
+    display: flex;
+    flex-direction: column;
+} */
+
+.authorInfo strong {
+    display: block; /* força a ficar em uma linha */
+    color: var(--gray-100);
+    line-height: 1.6rem;
+}
+
+.authorInfo span {
+    display: block; /* força a ficar em uma linha */
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    line-height: 1.6rem;
+}
+
+.commentform {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-600); /* Borda em cima do form */
+}
+
+.commentform > strong {
+    line-height: 1.6rem;
+    color: var(--gray-100);
+}
+
+.commentform textarea {
+    width: 100%; /* ocupar toda area */
+    background: var(--gray-900);
+    border: 0; /* Retirar as linhas brancas padrão do textarea */
+    resize: none; /* Não permitir que o usuário redimensione o tamanho */
+    height: 6rem;
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--gray-100);
+    line-height: 1.4rem;
+    margin-top: 1rem;
+}
+
+/* desaparecer o botão "Publicar" */
+/* .commentformFooter {
+    visibility: hidden;
+    max-width: 0;
+}
+ */
+/* Aparecer o botão "Publicar" ao clicar no "<textarea>" */
+.commentform:focus-within {
+    visibility: visible;
+    max-width: none;
+}
+
+
+.commentform button[type=submit] {
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 0;
+    background: var(--green-500);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer; /* indicar que é um botão quando passar o mouse por cima */
+    transition: background-color 0.1s; /* efeito de transição hover */
+}
+
+.commentform button[type=submit]:not(:disabled):hover {
+    background: var(--green-300);
+}
+
+.commentform button[type=submit]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed; /* Sem Permissão para clicar */
+    
+/*     background: var(--gray-600);
+    &:not(.disable):hover {
+        background: var(--gray-600);
+      }   */
+}
+
+.commentList {
+    margin-top: 2rem;
+}
